@@ -2,6 +2,7 @@ var bmi = document.getElementById("bmi")
 var bmiText = document.getElementById("dynamic")
 var bmiHeight
 var bmiWeight
+var newDiv
 bmi.addEventListener("click", addElement)
 
 function addElement() {
@@ -15,14 +16,14 @@ function addElement() {
     const br = document.createElement("br")
     const heightInput = document.createElement("input")
     heightInput.setAttribute("type", "text")
-    heightInput.setAttribute("placeholder", "Please enter height")
+    heightInput.setAttribute("placeholder", "Please enter height in meters")
     heightInput.id = "height"
     newDiv.appendChild(heightInput)
     newDiv.appendChild(br.cloneNode());
     newDiv.appendChild(br.cloneNode());
     const weightInput = document.createElement("input")
     weightInput.setAttribute("type", "text")
-    weightInput.setAttribute("placeholder", "Please enter weight")
+    weightInput.setAttribute("placeholder", "Please enter weight in kg")
     weightInput.id = "weight"
     newDiv.appendChild(weightInput)
     newDiv.appendChild(br.cloneNode());
@@ -42,24 +43,26 @@ function calculation(height, weight) {
     height * 3.2808
     weight * 2.2046
 
-    total = (weight / height) ** 2;
+    total = weight / (height ** 2);
 
-    const total = document.createElement("h2")
+    const htmlTotal = document.createElement("h2")
+    document.body.insertBefore(htmlTotal, newDiv)
+
     if (total < 18.5) {
-        const totalH2 = document.createTextNode("You are underweight")
-        total.appendChild(totalH2)
+        const totalH2 = document.createTextNode("Based on the BMI Calculator you are underweight")
+        htmlTotal.appendChild(totalH2)
     }
     else if (total > 18.5 && total < 25) {
-        const totalH2 = document.createTextNode("You are within a normal range.")
-        total.appendChild(totalH2)
+        const totalH2 = document.createTextNode("Based on the BMI Calculator you are within a normal range.")
+        htmlTotal.appendChild(totalH2)
     }
     else if (total > 25 && total < 30) {
-        const totalH2 = document.createTextNode("You are overwieght.")
-        total.appendChild(totalH2)
+        const totalH2 = document.createTextNode("Based on the BMI Calculator you are overwieght.")
+        htmlTotal.appendChild(totalH2)
     }
     else {
-        const totalH2 = document.createTextNode("You are obese.")
-        total.appendChild(totalH2)
+        const totalH2 = document.createTextNode("Based on the BMI Calculator you are obese.")
+        htmlTotal.appendChild(totalH2)
     }
 }
 
