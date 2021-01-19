@@ -16,26 +16,32 @@ function addElement() {
     const br = document.createElement("br")
     const heightInput = document.createElement("input")
     heightInput.setAttribute("type", "text")
-    heightInput.setAttribute("placeholder", "Please enter height in meters")
+    heightInput.setAttribute("placeholder", "Please enter height")
     heightInput.id = "height"
     newDiv.appendChild(heightInput)
     newDiv.appendChild(br.cloneNode());
     newDiv.appendChild(br.cloneNode());
     const weightInput = document.createElement("input")
     weightInput.setAttribute("type", "text")
-    weightInput.setAttribute("placeholder", "Please enter weight in kg")
+    weightInput.setAttribute("placeholder", "Please enter weight")
     weightInput.id = "weight"
     newDiv.appendChild(weightInput)
     newDiv.appendChild(br.cloneNode());
     newDiv.appendChild(br.cloneNode());
     const submit = document.createElement("input")
     submit.setAttribute("type", "submit")
-    submit.setAttribute("value", "submit")
+    submit.setAttribute("value", "Submit - Metric")
     submit.id = "calculate"
     newDiv.appendChild(submit)
+    const usSubmit = document.createElement("input")
+    usSubmit.setAttribute("type", "submit")
+    usSubmit.setAttribute("value", "Submit - Imperial")
+    usSubmit.id = "imperial"
+    newDiv.appendChild(usSubmit)
     bmi.style.display = "none"
     bmiText.style.display = "none"
     document.getElementById("calculate").addEventListener("click", bmiCalculation)
+    document.getElementById("imperial").addEventListener("click", usbmiCalculation)
 }
 
 
@@ -45,9 +51,22 @@ function calculation(height, weight) {
 
     total = weight / (height ** 2);
 
+
+    possible(total)
+
+}
+function uscalculation(height, weight) {
+    MI = ((weight * 703) / (height ** 2))
+
     const htmlTotal = document.createElement("h2")
     document.body.insertBefore(htmlTotal, newDiv)
+    possible(MI)
 
+}
+
+function possible(total) {
+    const htmlTotal = document.createElement("h2")
+    document.body.insertBefore(htmlTotal, newDiv)
     if (total < 18.5) {
         const totalH2 = document.createTextNode("Based on the BMI Calculator you are underweight")
         htmlTotal.appendChild(totalH2)
@@ -71,3 +90,10 @@ function bmiCalculation() {
     var bmiWeight = document.getElementById('weight').value
     calculation(bmiHeight, bmiWeight)
 }
+function usbmiCalculation() {
+    var bmiHeight = document.getElementById('height').value
+    var bmiWeight = document.getElementById('weight').value
+    uscalculation(bmiHeight, bmiWeight)
+}
+
+
