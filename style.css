@@ -17,6 +17,13 @@
     margin: 20px;
     position: relative;
 }
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
 .btn {
     border-radius: 12px;
 }
@@ -24,15 +31,18 @@
     padding: 20px;
     font-size: 1.5rem;
 }
-#kanyeDisplayBtn {
+#kanyeDisplayBtn, #kanyeClose {
     background-color: salmon;
 }
 
-#kanyeClose {
+#kanyeClose, #lifeClose {
     position: absolute; 
     top: 0;
     right: 0;
-    background-color: salmon;
+}
+
+#lifeClose, #lifeDisplayBtn, #ageBtn {
+    background-color: coral;
 }
 
 #kanye-quote-btn {
