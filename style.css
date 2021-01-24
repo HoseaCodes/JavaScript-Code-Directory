@@ -1,3 +1,9 @@
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .card {
     display: flex;
     justify-content: center;
@@ -8,14 +14,17 @@
     height: 150px;
     width: 600px;
     padding: 20px;
+    margin: 20px;
     position: relative;
 }
 .btn {
     border-radius: 12px;
 }
-#kanyeDisplayBtn {
+.displayBtn {
     padding: 20px;
     font-size: 1.5rem;
+}
+#kanyeDisplayBtn {
     background-color: salmon;
 }
 

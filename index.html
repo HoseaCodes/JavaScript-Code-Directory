@@ -4,22 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <section id="BandGenerator">
-        <h2 id="title"></h2>
-        <h3 id="questionOne"></h3>
-        <h3 id="questionTwo"></h3>
-        <input type="text" id="userInput" style="display: block;">
-        <input type="text" id="userInput2" style="display: none;">
-        <br>
-        <input type="button" id="btn" value="Submit" style="display: block;">
-        <input type="button" id="btn2" value="Submit" style="display: none;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <section id='weather-data'>
+                    <h2 id='title'></h2>
+                    <img id='icon'>
+                    <p id='temperature'></p>
+                </section>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrapper">
 
-    </section>
+        <!-- Kanye Quotes-->
+        <div class="card">
+            <button class="btn displayBtn" id="kanyeDisplayBtn">View Kanye's Tweets</button>
+            <button class="btn" id="kanyeClose">❌</button>
+            <section id="kanye" class="kanye-container">
+                <div class="kanye-text">
+                    <h1 id="kanye-quote"> If you would like to read a random quote from Kanye West, click the button
+                        below
+                    </h1>
+                    <p> -by Kanye West</p>
+                </div>
+                <button class="btn" id="kanye-quote-btn">Click Here</button>
+            </section>
+        </div>
+        <!-- Kanye Quotes-->
+
+        <!-- BandGenerator -->
+        <div class="card">
+            <button class="btn displayBtn" id="bandDisplayBtn">View Band Generator</button>
+            <button class="btn" id="bandClose">❌</button>
+            <section id="BandGenerator">
+                <h2 id="title"></h2>
+                <h3 id="questionOne"></h3>
+                <h3 id="questionTwo"></h3>
+                <input type="text" id="userInput" style="display: block;">
+                <input type="text" id="userInput2" style="display: none;">
+                <br>
+                <input type="button" id="btn" value="Submit" style="display: block;">
+                <input type="button" id="btn2" value="Submit" style="display: none;">
+            </section>
+        </div>
+
+        <!-- BandGenerator -->
+        <div class="card">
+            <button class="btn displayBtn" id="bmiDisplayBtn">View BMI Calculator</button>
+            <button class="btn" id="bandClose">❌</button>
+            <section id="BMI">
+                <p id="dynamic" style="display: block;">Dynamically Generate the BMI Calculator </p>
+                <input type="submit" value="Submit" id="bmi" style="display: block;">
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
     <script src="brandGenerator.js"></script>
+    <script src="bmiCalculator.js"></script>
+    <script src="weatherScript.js"></script>
+    <script src="kayneWestScript.js"></script>
 </body>
 
 </html>
