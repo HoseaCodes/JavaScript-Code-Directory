@@ -1,6 +1,8 @@
 const kanye = document.getElementById("kanye")
 const life = document.getElementById("life")
-const loadItems = [kanye, life]
+const bmi = document.getElementById("BMI")
+const bandGenerator = document.getElementById("BandGenerator")
+const loadItems = [kanye, life, bmi, bandGenerator]
 
 for (let index = 0; index < loadItems.length; index++) {
     const element = loadItems[index];
