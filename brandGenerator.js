@@ -37,9 +37,7 @@ function brandGenerator2() {
     clear()
     input2.style.display = "none"
     btn2.style.display = "none"
-
     document.getElementById("title").innerHTML = '<span"</span>' + "Band Name: " + value1 + value2 + '<span"</span>'
-
 }
 
 function clear() {

@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightslategray;
+    height: 150px;
+    width: 600px;
+    padding: 20px;
+    position: relative;
+}
+.btn {
+    border-radius: 12px;
+}
+#kanyeDisplayBtn {
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: salmon;
+}
+
+#kanyeClose {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    background-color: salmon;
+}
+
+#kanye-quote-btn {
+    background-color: salmon;
+
+}
