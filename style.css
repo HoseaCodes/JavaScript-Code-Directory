@@ -35,7 +35,7 @@ a {
     background-color: salmon;
 }
 
-#kanyeClose, #lifeClose {
+#kanyeClose, #lifeClose,#bandClose, #bmiClose {
     position: absolute; 
     top: 0;
     right: 0;
