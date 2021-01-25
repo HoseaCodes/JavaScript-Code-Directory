@@ -17,6 +17,12 @@
     margin: 20px;
     position: relative;
 }
+label {
+    align-self: baseline;
+    opacity: 0.5;
+    font-size: 1rem;
+    padding-top: 10px;
+}
 li {
     list-style: none;
 }
@@ -60,4 +66,41 @@ a {
 #kanye-quote-btn {
     background-color: salmon;
 
+}
+.tip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tipInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+}
+
+.tipTotal {
+    position: absolute;
+    right: 20%;
+    font-size: 1.8rem;
+}
+
+.tipLabel {
+    font-size: 1.5rem;
+}
+
+.tipCalc {
+    display: flex;
+}
+#tipPercentage, #numOfPeople, #bill{
+    height: 19px;
+}
+#bill {
+    width: 190px;
+}
+#tipPercentage::placeholder, #numOfPeople::placeholder, #bill::placeholder{
+    text-align: center;
+    font-size: 1.3rem;
 }
