@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>JavaScript Code Directory</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Game</a></li>
+                <section id='weather-data'>
+                    <h2 id='title'></h2>
+                    <img id='icon'>
+                    <p id='temperature'></p>
+                </section>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="game-title">Game Center</h1>
+    <main class="wrapper">
+        <div class="game-container">
+            <main>
+                <h1 class="game-subtitle">Welcome to Tic Tac Toe</h1>
+                <h3 class="game-info">Player X's Turn</h3>
+                <!-- Gameboard will go here -->
+                <section id="gameboard">
+                    <!-- We need 9 tic tac toe cells -->
+                    <div data-index='0' class="square bottom"></div>
+                    <div data-index='1' class="square bottom right left"></div>
+                    <div data-index='2' class="square bottom">X</div>
+                    <div data-index='3' class="square bottom">O</div>
+                    <div data-index='4' class="square bottom right left"></div>
+                    <div data-index='5' class="square bottom">X</div>
+                    <div data-index='6' class="square"></div>
+                    <div data-index='7' class="square right left"></div>
+                    <div data-index='8' class="square"></div>
+                </section>
+                <button class="btn">Reset</button>
+            </main>
+        </div>
+    </main>
+
+
+    <script src="tic-tac-toe.js"></script>
+
+</body>
+
+</html>
