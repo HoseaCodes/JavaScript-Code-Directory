@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/joke.css">
+    <script defer src="js/programmingJoke.js"></script>
+    <script defer src="js/weatherScript.js"></script>
+    <title>Funny Bone</title>
+</head>
+
+<body>
+    <header>
+        <h1>Funny Bone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Game</a></li>
+                <li><a href="joke.html">Funny Bone</a></li>
+                <section id='weather-data'>
+                    <h2 id='title'></h2>
+                    <img id='icon'>
+                    <p id='temperature'></p>
+                </section>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="joke-container">
+            <h1>Programer Humor</h1>
+            <p>Pick a category and laugh it out!</p>
+            <select id='select' name="">Select category
+                <option disabled selected value="Select">Select Category</option>
+                <option id="Any" value="Any">Any</option>
+                <option id="Miscellaneous" value="Miscellaneous">Miscellaneous</option>
+                <option id='Programming' value="Programming">Programming</option>
+                <option id="Dark" value="Dark">Dark</option>
+                <option id="Pun" value="Pun">Pun</option>
+            </select>
+            <label for="Exclude">Exclude:
+                <div class="checkbox">
+                    <label for="political">Political
+                        <input type="checkbox" id="political" name="political" id="political">
+                    </label>
+                    <label for="religious"> Religious
+                        <input type="checkbox" id="religious" name="religious" id="religious">
+                    </label>
+                </div>
+            </label>
+            <button id="jokeButton" type="submit">Generate</button>
+        </div>
+
+        <div class="card">
+            <div id="div"></div>
+            <div id="pick"></div>
+            <div id="Joke"></div>
+        </div>
+
+
+    </main>
+    <footer>
+        <p>All Right Reserved Funny Bone</p>
+    </footer>
+
+</body>
+
+</html>
